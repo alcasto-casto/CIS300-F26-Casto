@@ -37,6 +37,7 @@ main {
   color: #0b1f3a;
   font-weight: bold;
   border-right: 1px solid #0b1f3a;
+  text-decoration: none;
 }
 .stations a.active {
   background-color: #e8edf4;
