@@ -64,3 +64,22 @@ main {
   font-weight: bold;
   margin: 0;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 12px;
+}
+th, td {
+  border: 1px solid #ccd3de;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #0b1f3a;
+  color: white;
+}
+caption {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
