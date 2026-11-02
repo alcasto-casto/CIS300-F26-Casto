@@ -22,13 +22,13 @@
   <h2>Overview Dashboard</h2>
   <p>Detailed data is in the Cost Center, the Schedule Center, and the Performance pages.</p>
   <section class="stations">
-  <a href="#" class="active">Generating Station 1</a>
-  <a href="#">Generating Station 2</a>
-  <a href="#">Generating Station 3</a>
-  <a href="#">Generating Station 4</a>
+  <a href="#" class="active">Wildflower</a>
+  <a href="#">Desert Bloom</a>
+  <a href="#">Solaris</a>
+  <a href="#">Windspire</a>
 </section>
 <section class="cards">
-  <div class="card"><h3>Site</h3><p>Generating Station 1</p></div>
+  <div class="card"><h3>Site</h3><p>Wildflower</p></div>
   <div class="card"><h3>Unit</h3><p>Unit 1</p></div>
   <div class="card"><h3>Outage Duration</h3><p>15 days</p></div>
   <div class="card"><h3>Planned Labor Hours</h3><p>816</p></div>
@@ -51,6 +51,48 @@
       <tr><td>Instrumentation &amp; Controls</td><td>34</td><td>$33,532</td></tr>
     </tbody>
   </table>
+</section>
+<section class="request-form">
+  <h2>Work Order Request</h2>
+  <form>
+    <label for="team">Team Name</label>
+    <select id="team" name="team">
+      <option value="">Select the requesting team name</option>
+      <option>Mechanical Maintenance</option>
+      <option>Electrical Maintenance</option>
+      <option>I&amp;C Maintenance</option>
+    </select>
+
+    <label for="station">Generation Station</label>
+    <select id="station" name="station">
+      <option value="">Select the generating station</option>
+      <option>Wildflower</option>
+      <option>Desert Bloom</option>
+      <option>Solaris</option>
+      <option>Windspire</option>
+    </select>
+
+    <label for="unit">Generation Unit</label>
+    <select id="unit" name="unit">
+      <option value="">Select the generation unit</option>
+      <option>Unit 1</option>
+      <option>Unit 2</option>
+      <option>Unit 3</option>
+    </select>
+
+    <p class="label">Work Type</p>
+    <input type="radio" id="mech" name="worktype" value="Mechanical">
+    <label for="mech" class="radio">Mechanical</label>
+    <input type="radio" id="elec" name="worktype" value="Electrical" checked>
+    <label for="elec" class="radio">Electrical</label>
+    <input type="radio" id="ic" name="worktype" value="I&amp;C">
+    <label for="ic" class="radio">Instrumentation &amp; Controls</label>
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description" rows="5" placeholder="Describe the problem or work needed"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
 </section>
 </main>
 </body>

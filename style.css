@@ -1,46 +1,53 @@
+:root {
+  --text: #0e1808;
+  --background: #f6fbf4;
+  --primary: #79be46;
+  --secondary: #96da9c;
+  --accent: #75ce8c;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #f4f6f9;
-  color: #1a1a1a;
+  background-color: var(--background);
+  color: var(--text);
 }
 header {
-  background-color: #0b1f3a;
-  color: white;
+  background-color: var(--primary);
+  color: var(--text);
   padding: 16px 24px;
 }
 nav {
   display: flex;
   gap: 24px;
-  background-color: #e8edf4;
+  background-color: var(--secondary);
   padding: 10px 24px;
 }
 nav a {
-  color: #0b1f3a;
+  color: var(--text);
   text-decoration: none;
   font-weight: bold;
 }
 nav a.active {
-  border-bottom: 3px solid #0b1f3a;
+  border-bottom: 3px solid var(--text);
 }
 main {
   padding: 24px;
 }
 .stations {
   display: flex;
-  border: 1px solid #0b1f3a;
+  border: 1px solid var(--primary);
   margin: 20px 0;
 }
 .stations a {
   flex: 1;
   padding: 12px;
-  color: #0b1f3a;
+  color: var(--text);
   font-weight: bold;
-  border-right: 1px solid #0b1f3a;
+  border-right: 1px solid var(--primary);
   text-decoration: none;
 }
 .stations a.active {
-  background-color: #e8edf4;
+  background-color: var(--accent);
 }
 .cards {
   display: grid;
@@ -49,14 +56,14 @@ main {
 }
 .card {
   background-color: white;
-  border: 1px solid #ccd3de;
+  border: 1px solid var(--secondary);
   padding: 12px;
   text-align: center;
 }
 .card h3 {
   font-size: 12px;
   text-transform: uppercase;
-  color: #556;
+  color: var(--text);
   margin: 0 0 8px;
 }
 .card p {
@@ -71,15 +78,62 @@ table {
   margin-top: 12px;
 }
 th, td {
-  border: 1px solid #ccd3de;
+  border: 1px solid var(--secondary);
   padding: 10px;
   text-align: left;
 }
 th {
-  background-color: #0b1f3a;
-  color: white;
+  background-color: var(--primary);
+  color: var(--text);
 }
 caption {
   font-weight: bold;
   margin-bottom: 8px;
+}
+.request-form form {
+  max-width: 680px;
+}
+
+.request-form label,
+.request-form .label {
+  display: block;
+  font-weight: bold;
+  margin: 14px 0 6px;
+}
+
+.request-form select,
+.request-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--secondary);
+  border-radius: 6px;
+  background: white;
+  font-family: inherit;
+}
+
+.request-form select:focus,
+.request-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.request-form label.radio {
+  display: inline;
+  font-weight: normal;
+  margin: 0 20px 0 4px;
+}
+
+.request-form input[type="radio"] {
+  accent-color: var(--primary);
+}
+
+.request-form button {
+  margin-top: 18px;
+  padding: 12px 40px;
+  background: var(--primary);
+  color: var(--text);
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
